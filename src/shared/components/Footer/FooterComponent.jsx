@@ -1,19 +1,20 @@
 // Footer.jsx
 import { Button } from 'primereact/button';
 import 'primeflex/primeflex.css';
-import './Footer.css';
+import './FooterComponent.css';
+import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const FooterComponent = () => {
     return (
-        <footer className="footer p-p-4">
+        <footer className="footer p-p-4 flex">
             <div className="p-grid p-align-center">
                 {/* Sección de enlaces */}
                 <div className="p-col-12 p-md-4">
                     <h4>Enlaces</h4>
                     <ul className="footer-links">
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/about">Sobre Nosotros</a></li>
-                        <li><a href="/contact">Contacto</a></li>
+                        <li><Link to="/" className="p-menuitem-link">Inicio</Link></li>
+                        <li><Link to="/movimientos" className="p-menuitem-link">Movmientos</Link></li>
+                        <li><Link to="/balance" className="p-menuitem-link">Balances</Link></li>
                     </ul>
                 </div>
 
@@ -34,4 +35,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default FooterComponent;

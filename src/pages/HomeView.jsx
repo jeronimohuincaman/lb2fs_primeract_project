@@ -1,25 +1,20 @@
 // Home.jsx
-import { Button } from 'primereact/button';
-import { DataTable/* , Column  */ } from 'primereact/datatable';
-import Header from '../shared/components/Header/Header';
+import HeaderComponent from '../shared/components/Header/HeaderComponent';
+import FooterComponent from '../shared/components/Footer/FooterComponent';
 
-const data = [
-    { id: 1, name: 'John', email: 'john@example.com' },
-    { id: 2, name: 'Jane', email: 'jane@example.com' },
-];
-
-const Home = () => {
+const HomeView = () => {
     return (
         <>
-            <Header />
-            <div className="p-p-3">
-                <h2>Users</h2>
-                <DataTable value={data} responsiveLayout="scroll">
-                </DataTable>
-                <Button label="Add User" icon="pi pi-plus" className="p-mt-3" />
+            <HeaderComponent />
+            <div className="p-p-4 p-grid">
+                <div className="p-col-12 p-md-8 p-lg-6">
+                    <h1>Mi Proyecto</h1>
+                    <p>Bienvenido a este nuevo proyecto donde realizaremos un sistema de registro de movimientos financieros.</p>
+                </div>
             </div>
+            <FooterComponent />
         </>
     );
 };
 
-export default Home;
+export default HomeView;
